@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --c1: #ff8c00;
+    --c2: #ff1493;
+    --c3: #00bfff;
+    --c4: #000;
+}
+body {
+    background-color: var(--c4);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* hamburger icon */
+.hamburger-icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #494949;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .hamburger-icon.toggle .bar:first-child {
+    transform: rotate(-45deg) translate(-8px, 7px);
+  }
+  
+  /* Fade out the second bar */
+  .hamburger-icon.toggle .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  /* Rotate third bar */
+  .hamburger-icon.toggle .bar:last-child {
+    transform: rotate(45deg) translate(-8px, -7px);
+  }
+  .containham {
+    display: flex;
+    justify-content: right;
+  }
+
+  #menu-container {
+    position:absolute;
+    text-align: right;
+    width: 20vmax;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+  
+  #menu-container.show {
+    height: auto;
+  }
+  
+  #menu-items {
+    background-color: #494949;
+    padding: 10px;
+  }
+  
+  #menu-items a {
+    display: block;
+    padding: 8px;
+    font-size: 2.5vmax;
+    text-decoration: none;
+    color: var(--c3);
+    transition: ease 0.5s;
+  }
+  
+  #menu-items a:hover {
+    color: var(--c2);
+  }
+
+  @media (max-width: 540px) {
+    .bar {
+      width: 20px;
+      margin: 3px 0;
+    }
+  
+    #menu-items {
+      padding: 5px;
+    }
+  
+    #menu-items a {
+      padding: 3px 0;
+    }
+  }
+
+  
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--c4);
+}
+#logo {
+    width: auto;
+    height: 4vmax;
+    transition: ease 0.5s;
+}
+#logo:hover {
+    transform: scale(0.95);
+}
+.separator {
+    background-color: #fff;
+    width: 100%;
+    height: 0.2vmax;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1%;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+input[type="text"] {
+    background-color: #494949;
+    padding: 0.5rem;
+    border: 2px solid #252525;
+    border-radius: 40px;
+    font-size: 1.5vmax;
+    width: 28vmax;
+    height: 2.2vmax;
+    outline: none;
+    transition: 0.5s;
+}
+input[type=text]:focus {
+    border: 2px solid var(--c1);
+    background-color: var(--c4);
+    color: #fff;
+  }
+ul {
+    margin-right: 10px;
+}
+ul li {
+    display: inline-block;
+    list-style: none;
+}
+ul li a {
+    text-decoration: none;
+    color: var(--c3);
+    font-size: 2vmax;
+    font-weight: 500;
+    padding: 1vmax 1.5vmax;
+    border-radius: 20px;
+    transition: ease 0.5s;
+}
+ul li a:hover {
+    color: var(--c2);
+}
+.empty {
+    background-color: var(--c4);
+    width: 100vw;
+    margin-top: 25%;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vmin;
+    width: 100vw;
+}
+table {
+    border-collapse: collapse;
+    border-color: #252525;
+    margin-bottom: 5%;
+}
+#table-title {
+    font-weight: bolder;
+    text-align: center;
+    color: var(--c3);
+    margin-top: 100vmax;
+    margin-bottom: 2%;
+    font-size: 2.5vmax;
+}
+.T-itle {
+    color: var(--c1);
+    font-size: 2vmax;
+    font-weight: bold;
+    padding: 15px;
+    border: 4px solid #252525;
+}
+td {
+    padding: 8px;
+    font-size: 3.5vmin;
+    color: #fff;
+    border: 4px solid #252525;
+}
+.bxs-circle {
+    font-size: 1.5vmax;
+}
+.online {
+    color: rgb(0, 255, 0);
+}
+.offline {
+    color: rgb(255, 48, 48);
+}
+.unknown {
+    color: #5e5e5e;
+}
+h2 {
+    color: #fff;
+    font-size: 3vmax;
+    text-align: center;
+    margin-bottom: 1vmax;
+    margin-top: 3.5vmax;
+}
+.foot-content {
+    box-shadow: 0px -5px 60px 1px #fff;
+    background-color: var(--c4);
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 3%;
+    margin-top: 10vmax;
+    margin-bottom: 10vmax;
+}
+.foot-title {
+    width: 40vmax;
+}
+#foot-name {
+    font-size: 2.5vmax;
+    color: var(--c3);
+}
+#foot-p {
+    font-size: 1.4vmax;
+    color: #fff;
+}
+.ul2 {
+    display: flex;
+    flex-direction: column;
+}
+.ul2 li {
+    margin-bottom: 3%;
+}
+.ul2 li a {
+    color: #fff;
+    font-size: 1.6vmax;
+}
+
+@media (max-width: 1800px) {
+}
+
+@media (max-width: 390px) {
+    
+}
